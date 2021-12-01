@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" style="-fx-background-color: #8baddb;" vgap="10" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+  
+      <Pane fx:id="LogInScreen" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #8baddb;">
+         <children>
+            <ImageView fitHeight="500.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../PizzaBackground.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="WelcomeLabel" alignment="CENTER" layoutX="21.0" layoutY="46.0" prefHeight="51.0" prefWidth="476.0" text="Choose One of the following" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Button fx:id="LoginButton" layoutX="151.0" layoutY="172.0" mnemonicParsing="false" onAction="#Log" prefHeight="40.0" prefWidth="197.0" text=" Customer Login " />
+            <Button fx:id="RegisterButton" layoutX="151.0" layoutY="262.0" mnemonicParsing="false" onAction="#Create" prefHeight="40.0" prefWidth="197.0" text="Customer Registeration" />
+            <Button layoutX="151.0" layoutY="355.0" mnemonicParsing="false" onAction="#EmpLoginScreen" prefHeight="40.0" prefWidth="197.0" text="EmployeeLogin" />
+         </children></Pane>
+    
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
