@@ -10,9 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.Scanner;
 
 
 public class Controller {
@@ -34,10 +33,11 @@ public class Controller {
     public Label NoReg;
     public Button goBack;
     public Button CreateAccount;
+    public Label EmpLoginWarning;
 
 
     public void Welcome(ActionEvent actionEvent) throws Exception {
-        Parent root1 = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root1 = FXMLLoader.load(getClass().getResource("LoginOrRegister.fxml"));
         Scene R1Scene = new Scene(root1);
         Stage stage1 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage1.setScene(R1Scene);
@@ -78,15 +78,61 @@ public class Controller {
         stage4.setTitle("Employee Login");
         stage4.show();
     }
+    public void ELogin(ActionEvent actionEvent) throws IOException {
+        Parent root5 = FXMLLoader.load(getClass().getResource("EmpView.fxml"));
+        Scene R4Scene = new Scene(root5);
+        Stage stage5 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage5.setScene(R4Scene);
+        stage5.setTitle("Employee View");
+        stage5.show();
 
-    public void CheckLogin() {
+    }
+    public void Menu(ActionEvent actionEvent) {
+
+
+    }
+
+
+    public void CheckLogin(ActionEvent actionEvent) {
         String UT = UserText.getText();
         String PT = PassText.getText();
         Notify.setText(null);
 
         if (UT.isBlank() || PT.isBlank()) {
             Notify.setText("No UserName or Password");
-        } else {
+        }
+        else {
+            Notify.setText(null);
+            try {
+                BufferedReader BR1 = new BufferedReader(new FileReader("UserName.txt"));
+                BufferedReader BR2 = new BufferedReader(new FileReader("Password.txt"));
+                Scanner URead = new Scanner(BR1);
+                Scanner PRead = new Scanner(BR2);
+                String R1, R2;
+                while(URead.hasNextLine() && PRead.hasNextLine()){
+                    R1=URead.nextLine();
+                    R2=PRead.nextLine();
+
+                    if(R1.equals(UT) && R2.equals(PT)){
+
+                        Menu(actionEvent);
+                    }
+                }
+                Notify.setText("Username or Password are incorrect");
+
+
+
+
+            }
+            catch (FileNotFoundException E){
+                E.printStackTrace();
+            }
+
+
+
+
+
+
 
         }
 
@@ -114,11 +160,9 @@ public class Controller {
                 BufferedWriter PBW = new BufferedWriter(P);
                 PBW.write(Pw);
                 PBW.newLine();
-
                 PBW.close();
                 NoReg.setText("Account created");
-
-
+                Log(actionEvent);
 
             } catch (IOException E) {
                 E.printStackTrace();
@@ -129,10 +173,22 @@ public class Controller {
 
     }
 
-    public void Menu(ActionEvent actionEvent) {
 
 
+    public void jumpToEmp(ActionEvent actionEvent) throws Exception{
+        String EuN= UserText.getText();
+        String EpN = PassText.getText();
+
+        if((EuN.equals("CheckEmp100") && EpN.equals("EmpPizza001") ) ||(EuN.equals("MSingh101")&& EpN.equals("EmpPizza002") ) ||(EuN.equals("JimTa491") && EpN.equals("EmpPizza3") )){
+            ELogin(actionEvent);
+        }
+        else{
+            EmpLoginWarning.setText("Please Log in with your UserName and Password");
+
+        }
     }
+
+
 }
 
 

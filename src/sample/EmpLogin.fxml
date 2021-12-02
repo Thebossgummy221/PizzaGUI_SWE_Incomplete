@@ -28,7 +28,12 @@
          </font></Label>
       <TextField fx:id="UserText" layoutX="168.0" layoutY="207.0" prefHeight="26.0" prefWidth="276.0" />
       <TextField fx:id="PassText" layoutX="168.0" layoutY="290.0" prefHeight="26.0" prefWidth="276.0" />
-      <Button fx:id="EmLogin" layoutX="80.0" layoutY="417.0" mnemonicParsing="false" onAction="#Menu" prefHeight="35.0" prefWidth="59.0" text="Log In" />
-      <Button fx:id="goBack2" layoutX="328.0" layoutY="417.0" mnemonicParsing="false" onAction="#Welcome" prefHeight="35.0" prefWidth="59.0" text="Go Back" />
+      <Button fx:id="EmLogin" layoutX="80.0" layoutY="417.0" mnemonicParsing="false" onAction="#jumpToEmp" prefHeight="35.0" prefWidth="59.0" text="Log In" />
+      <Button fx:id="goBack2" layoutX="332.0" layoutY="417.0" mnemonicParsing="false" onAction="#Welcome" prefHeight="35.0" prefWidth="59.0" text="Go Back" />
+      <Label fx:id="EmpLoginWarning" layoutX="6.0" layoutY="362.0" prefHeight="43.0" prefWidth="494.0" textFill="#ff0505">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
