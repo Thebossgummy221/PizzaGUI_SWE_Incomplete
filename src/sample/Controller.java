@@ -1,5 +1,6 @@
 package sample;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -86,7 +87,23 @@ public class Controller {
         stage5.setTitle("Employee View");
         stage5.show();
 
+
+
     }
+
+    ///////////  Test
+    public void Cart(ActionEvent actionEvent) throws Exception {
+        Parent root6 = FXMLLoader.load(getClass().getResource("Cart.fxml"));
+        Scene R1Scene = new Scene(root6);
+        Stage stage1 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage1.setScene(R1Scene);
+        stage1.setTitle("Cart");
+        stage1.show();
+
+    }
+    ///////////  Test
+
+
     public void Menu(ActionEvent actionEvent) {
 
 
