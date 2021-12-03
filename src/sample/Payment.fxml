@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #8baddb;"
+            xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Payment">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8baddb" height="88.0" stroke="BLACK" strokeType="INSIDE"
+              strokeWidth="2.0" width="205.0"/>
+   <TextField editable="false" layoutX="3.0" layoutY="3.0" prefHeight="82.0" prefWidth="195.0"
+              style="-fx-background-color: #8baddb;" text="Payment Selection">
+      <font>
+         <Font size="39.0"/>
+      </font>
+   </TextField>
+   <Button fx:id="goBack" layoutX="75.0" layoutY="338.0" mnemonicParsing="false" onAction="#GoToCart" text="Go Back"/>
+   <Button fx:id="GoToPage" layoutX="445.0" layoutY="338.0" mnemonicParsing="false" onAction="#GoToReceipt"
+           prefHeight="25.0" prefWidth="63.0" text="Accept"/>
+</AnchorPane>

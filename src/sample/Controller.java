@@ -1,5 +1,6 @@
 package sample;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -29,6 +30,7 @@ public class Controller {
     public TextField UserText;
     public TextField PassText;
     public Button GoToPage;
+    public Button GoToCartPage;
     public Label Notify;
     public Label NoReg;
     public Button goBack;
@@ -86,11 +88,64 @@ public class Controller {
         stage5.setTitle("Employee View");
         stage5.show();
 
-    }
-    public void Menu(ActionEvent actionEvent) {
 
 
     }
+    //// Access Menu Page ////
+
+    public void GoToMenuScreen(ActionEvent actionEvent) throws IOException {
+        Parent root6 = FXMLLoader.load(getClass().getResource("MenuScreen.fxml"));
+        Scene R5Scene = new Scene(root6);
+        Stage stage6 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage6.setScene(R5Scene);
+        stage6.setTitle("MenuScreen");
+        stage6.show();
+
+    }
+    ////  Cart Page  ////
+
+
+    public void GoToCart(ActionEvent actionEvent) throws Exception {
+        Parent root7 = FXMLLoader.load(getClass().getResource("Cart.fxml"));
+        Scene R6Scene = new Scene(root7);
+        Stage stage7 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage7.setScene(R6Scene);
+        stage7.setTitle("Cart");
+        stage7.show();
+
+    }
+    //// Payment Page ////
+
+    public void GoToPayment(ActionEvent actionEvent) throws Exception {
+        Parent root8 = FXMLLoader.load(getClass().getResource("Payment.fxml"));
+        Scene R7Scene = new Scene(root8);
+        Stage stage8 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage8.setScene(R7Scene);
+        stage8.setTitle("Payment");
+        stage8.show();
+    }
+    //// Receipt Page ////
+
+    public void GoToReceipt(ActionEvent actionEvent) throws Exception{
+        Parent root9 = FXMLLoader.load(getClass().getResource("ReceiptScreen.fxml"));
+        Scene R8Scene = new Scene(root9);
+        Stage stage9 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage9.setScene(R8Scene);
+        stage9.setTitle("Payment");
+        stage9.show();
+    }
+    //// Order Slip Page ////
+
+    public void GoToOrderSlip(ActionEvent actionEvent) throws Exception{
+
+    }
+
+
+
+
+
+
+
 
 
     public void CheckLogin(ActionEvent actionEvent) {
@@ -115,7 +170,7 @@ public class Controller {
 
                     if(R1.equals(UT) && R2.equals(PT)){
 
-                        Menu(actionEvent);
+                        GoToMenuScreen(actionEvent);
                     }
                 }
                 Notify.setText("Username or Password are incorrect");
@@ -124,7 +179,7 @@ public class Controller {
 
 
             }
-            catch (FileNotFoundException E){
+            catch (IOException E){
                 E.printStackTrace();
             }
 
