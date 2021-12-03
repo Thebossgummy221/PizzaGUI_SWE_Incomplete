@@ -23,6 +23,7 @@
             <Button fx:id="LoginButton" layoutX="151.0" layoutY="172.0" mnemonicParsing="false" onAction="#Log" prefHeight="40.0" prefWidth="197.0" text=" Customer Login " />
             <Button fx:id="RegisterButton" layoutX="151.0" layoutY="262.0" mnemonicParsing="false" onAction="#Create" prefHeight="40.0" prefWidth="197.0" text="Customer Registeration" />
             <Button layoutX="151.0" layoutY="355.0" mnemonicParsing="false" onAction="#EmpLoginScreen" prefHeight="40.0" prefWidth="197.0" text="Employee Login" />
+            <Button fx:id="GoToMenuScreenButton" layoutX="152.0" layoutY="97.0" mnemonicParsing="false" onAction="#GoToMenuScreen" prefHeight="40.0" prefWidth="197.0" text="Menu" />
          </children></Pane>
     
    </children>
