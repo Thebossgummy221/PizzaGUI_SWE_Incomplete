@@ -13,7 +13,7 @@
          </image>
       </ImageView>
       <Button layoutX="89.0" layoutY="137.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="127.0" text="View Database" />
-      <Button layoutX="481.0" layoutY="137.0" mnemonicParsing="false" onAction="#Menu" prefHeight="79.0" prefWidth="127.0" text="Access Menu" />
+      <Button layoutX="481.0" layoutY="137.0" mnemonicParsing="false" onAction="#GoToMenuScreen" prefHeight="79.0" prefWidth="127.0" text="Access Menu" />
       <Label layoutX="24.0" layoutY="14.0" prefHeight="60.0" prefWidth="669.0" text="Employee Main Menu" textFill="#22c8ff">
          <font>
             <Font name="System Bold" size="59.0" />
