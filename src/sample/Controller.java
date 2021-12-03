@@ -1,5 +1,6 @@
 package sample;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -86,11 +87,35 @@ public class Controller {
         stage5.setTitle("Employee View");
         stage5.show();
 
-    }
-    public void Menu(ActionEvent actionEvent) {
 
 
     }
+
+    public void GoToMenuScreen(ActionEvent actionEvent) throws IOException {
+        Parent root6 = FXMLLoader.load(getClass().getResource("MenuScreen.fxml"));
+        Scene R5Scene = new Scene(root6);
+        Stage stage6 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage6.setScene(R5Scene);
+        stage6.setTitle("MenuScreen");
+        stage6.show();
+
+    }
+    ///////////  Cart Page  //////
+
+
+    public void GoToCart(ActionEvent actionEvent) throws Exception {
+        Parent root7 = FXMLLoader.load(getClass().getResource("Cart.fxml"));
+        Scene R6Scene = new Scene(root7);
+        Stage stage7 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage7.setScene(R6Scene);
+        stage7.setTitle("Cart");
+        stage7.show();
+
+    }
+    ///////////
+
+
+
 
 
     public void CheckLogin(ActionEvent actionEvent) {
@@ -115,7 +140,7 @@ public class Controller {
 
                     if(R1.equals(UT) && R2.equals(PT)){
 
-                        Menu(actionEvent);
+                        GoToMenuScreen(actionEvent);
                     }
                 }
                 Notify.setText("Username or Password are incorrect");
@@ -124,7 +149,7 @@ public class Controller {
 
 
             }
-            catch (FileNotFoundException E){
+            catch (IOException E){
                 E.printStackTrace();
             }
 
