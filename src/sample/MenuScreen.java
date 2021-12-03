@@ -1,4 +1,8 @@
 package sample;
 
-public class MenuScreen {
+import javafx.event.ActionEvent;
+
+public class MenuScreen extends Controller{
+
+
 }

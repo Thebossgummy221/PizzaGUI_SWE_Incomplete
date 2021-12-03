@@ -13,5 +13,7 @@
             <Font size="39.0" />
          </font>
       </TextField>
+      <Button fx:id="goBack" layoutX="64.0" layoutY="344.0" mnemonicParsing="false" onAction="#Welcome" text="Go Back" />
+      <Button fx:id="GoToCartPage" layoutX="424.0" layoutY="344.0" mnemonicParsing="false" onAction="#GoToCart" text="Go to Checkout" />
    </children>
 </AnchorPane>

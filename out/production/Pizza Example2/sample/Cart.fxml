@@ -5,8 +5,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #8baddb;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #8baddb;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Cart">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8baddb" height="88.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="188.0" />
       <TextField layoutX="3.0" layoutY="3.0" prefHeight="32.0" prefWidth="182.0" style="-fx-background-color: #8baddb;" text="CART">
@@ -14,5 +13,6 @@
             <Font size="39.0" />
          </font>
       </TextField>
+      <Button fx:id="goBack" layoutX="64.0" layoutY="333.0" mnemonicParsing="false" onAction="#GoToMenuScreen" text="Go Back" />
    </children>
 </AnchorPane>
