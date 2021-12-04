@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.*;
 import java.util.Scanner;
 
@@ -102,6 +103,37 @@ public class Controller {
         stage6.show();
 
     }
+    //// Meat Lovers ////
+    public void GoToMeatLovers(ActionEvent actionEvent) throws IOException{
+        Parent root10 = FXMLLoader.load(getClass().getResource("MeatScreen"));
+        Scene R9Scene = new Scene(root10);
+        Stage stage10 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage10.setScene(R9Scene);
+        stage10.setTitle("Meat Lovers");
+        stage10.show();
+    }
+    //// Supreme ////
+  /*  public void GoToMeatLovers(ActionEvent actionEvent) throws IOException{
+        Parent root11 = FXMLLoader.load(getClass().getResource("Meat Screen"));
+        Scene R10Scene = new Scene(root10);
+        Stage stage7 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage7.setScene(R10Scene);
+        stage7.setTitle("Meat Lovers");
+        stage7.show();
+    //// Pepp ////
+        public void GoToMeatLovers(ActionEvent actionEvent) throws IOException{
+            Parent root12 = FXMLLoader.load(getClass().getResource("Meat Screen"));
+            Scene R11Scene = new Scene(root10);
+            Stage stage7 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage7.setScene(R9Scene);
+            stage7.setTitle("Meat Lovers");
+            stage7.show();
+
+   */
+    //// BUff////
+    //// Build your Own ////
+    //// Drinks ////
+
     ////  Cart Page  ////
 
 
