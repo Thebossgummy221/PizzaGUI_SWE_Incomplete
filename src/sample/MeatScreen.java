@@ -1,4 +1,5 @@
-import sample.Controller;
+package sample;
 
 public class MeatScreen extends Controller {
+
 }

@@ -105,7 +105,7 @@ public class Controller {
     }
     //// Meat Lovers ////
     public void GoToMeatLovers(ActionEvent actionEvent) throws IOException{
-        Parent root10 = FXMLLoader.load(getClass().getResource("MeatScreen"));
+        Parent root10 = FXMLLoader.load(getClass().getResource("MeatScreen.fxml"));
         Scene R9Scene = new Scene(root10);
         Stage stage10 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage10.setScene(R9Scene);

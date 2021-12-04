@@ -1,11 +1,17 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class MenuScreen extends Controller{
 
 
-    public void GoToMeatLovers(ActionEvent actionEvent) {
+    public void GoToMeatLovers(ActionEvent actionEvent){
+
     }
 
     public void GoToSuper(ActionEvent actionEvent) {
